@@ -1,0 +1,24 @@
+{
+  "name": "wta",
+  "version": "0.0.46",
+  "description": "Javascript exercises",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "clear": "0.0.1",
+    "clui": "^0.3.1",
+    "figlet": "^1.2.0",
+    "fs-extra": "^2.1.2",
+    "inquirer": "^3.0.6",
+    "minimist": "^1.2.0",
+    "vm2": "^3.4.6"
+  },
+  "bin": {
+    "wta": "./index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
