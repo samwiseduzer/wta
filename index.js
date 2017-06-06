@@ -44,8 +44,11 @@ if(argv._.length === 1){
 let exercise = +argv._[1];
 
 // if valid command, but invalid exercise argument
-if(exercise > 16 || exercise < 0){
-    Util.fatalError('The highest current exercise is 16!');
+const NUM_EXERCISES = fs.readdirSync('./lib/exercises').filter(function(directory) {
+    return directory !== '.DS_Store';
+}).length - 1;
+if(exercise > NUM_EXERCISES || exercise < 0){
+    Util.fatalError(`The highest current exercise is ${NUM_EXERCISES}!`);
 }
 
 // if valid command and exercise number
