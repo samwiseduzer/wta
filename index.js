@@ -43,10 +43,11 @@ if(argv._.length === 1){
 
 let exercise = +argv._[1];
 
-// if valid command, but invalid exercise argument
-const NUM_EXERCISES = fs.readdirSync('./lib/exercises').filter(function(directory) {
+const NUM_EXERCISES = fs.readdirSync(`${__dirname}/lib/exercises`).filter(function(directory) {
     return directory !== '.DS_Store';
 }).length - 1;
+
+// if valid command, but invalid exercise argument
 if(exercise > NUM_EXERCISES || exercise < 0){
     Util.fatalError(`The highest current exercise is ${NUM_EXERCISES}!`);
 }
@@ -62,10 +63,10 @@ else{
 
 function displayCmds(){
     console.log(chalk.yellow('AVAILABLE COMMANDS:'));
-    console.log(chalk.yellow('exercise <exercise #>: ' + chalk.white('Prints description of the given exercise')));
-    console.log(chalk.yellow('hint <exercise #>: ' + chalk.white('Prints hints for the given exercise')));
-    console.log(chalk.yellow('gen <exercise #>: ' + chalk.white('Generates starter file for the given exercise if it doesn\'t already exist')));
-    console.log(chalk.yellow('test <exercise #> <optional filepath>: ' + chalk.white('Tests the given exercise at the optionally given filepath or, if filepath is omitted, the default exercise path')));
+    console.log(chalk.white('exercise <exercise #>: ' + chalk.white('Prints description of the given exercise')));
+    console.log(chalk.white('hint <exercise #>: ' + chalk.white('Prints hints for the given exercise')));
+    console.log(chalk.white('gen <exercise #>: ' + chalk.white('Generates starter file for the given exercise if it doesn\'t already exist')));
+    console.log(chalk.white('test <exercise #> <optional filepath>: ' + chalk.white('Tests the given exercise at the optionally given filepath or, if filepath is omitted, the default exercise path')));
 
     console.log(chalk.blue(`
     Example workflow: 
