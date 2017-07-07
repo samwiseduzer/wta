@@ -4,6 +4,7 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
         {
             "type": "node2",
             "request": "launch",
@@ -13,6 +14,13 @@
                 "test",
                 "34"
             ]
+        },
+        {
+            "type": "node2",
+            "request": "launch",
+            "name": "Test Child",
+            "program": "${workspaceRoot}/lib/jasmineTest.js",
+            "port": 6731
         },
         {
             "type": "node",
