@@ -6,7 +6,7 @@
 			"request": "launch",
 			"name": "Test Program",
 			"program": "${workspaceRoot}/index.js",
-			"args": ["test", "50"]
+			"args": ["test", "51"]
 		},
 		{
 			"type": "node2",
