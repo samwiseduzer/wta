@@ -1,6 +1,6 @@
 {
 	"name": "wta",
-	"version": "0.0.174",
+	"version": "0.0.177",
 	"description": "Javascript exercises",
 	"main": "index.js",
 	"scripts": {
